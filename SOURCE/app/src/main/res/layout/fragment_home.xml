@@ -1,0 +1,76 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include
+        layout="@layout/search_layout"
+        ></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="7dp"
+                android:layout_marginLeft="17dp"
+                android:textStyle="bold"
+                android:text="Khám phá danh mục"
+                android:textColor="#000"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tv_sell"
+                    android:layout_marginHorizontal="75dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignBottom="@id/rv_news"
+                    android:hint="Bán đồ của bạn "
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:background="@drawable/imageview_yellow_ground"
+                    android:drawableLeft="@mipmap/ic_camera" />
+
+</RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <item android:id="@+id/nav_trangchu"
+        android:title="Trang chủ"
+        android:icon="@mipmap/diamond_icon"
+
+
+        ></item>
+    <item android:id="@+id/nav_baidang"
+        android:title="Bài đăng"
+        android:icon="@mipmap/abc_icon"
+
+        ></item>
+    <item android:id="@+id/nav_thongbao"
+        android:title="Thông báo"
+        android:icon="@mipmap/bell_icon"
+
+        ></item>
+    <item android:id="@+id/nav_taikhoan"
+        android:title="Tài khoản"
+        android:icon="@mipmap/user_icon"
+
+        ></item>
+
+</menu>

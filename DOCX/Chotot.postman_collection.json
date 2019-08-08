@@ -1,0 +1,721 @@
+{
+	"info": {
+		"_postman_id": "dc0f608e-e5b0-430d-87db-b0e6fcc6a6c0",
+		"name": "Chotot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}GetCategory",
+					"host": [
+						"{{url}}GetCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListPostByName",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{urlTest}}GetListPostByName?searchKey=a&page=2&perPage=2",
+					"host": [
+						"{{urlTest}}GetListPostByName"
+					],
+					"query": [
+						{
+							"key": "searchKey",
+							"value": "a"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "perPage",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPostByCategoryID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}GetPostByCategoryID?id=613&ListFilter=[]&page=20&perPage=50",
+					"host": [
+						"{{url}}GetPostByCategoryID"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "613"
+						},
+						{
+							"key": "ListFilter",
+							"value": "[]"
+						},
+						{
+							"key": "page",
+							"value": "20"
+						},
+						{
+							"key": "perPage",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPostDetail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}GetPostDetail?id=126",
+					"host": [
+						"{{url}}GetPostDetail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "126"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserInfo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "$2y$10$3IPRaSY9obpiOt0pbWnnVOnkHYE6U6/Cw3FDV0wr1mqcpMeN7RX/S"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{urlTest}}GetUserInfo?",
+					"host": [
+						"{{urlTest}}GetUserInfo"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListUsersPost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{urlTest}}ListUsersPost?page=2&perPage=3",
+					"host": [
+						"{{urlTest}}ListUsersPost"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "perPage",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListPropertyByCategoryID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://chotot.winds.vn/api/GetListPropertyByCategoryID?cateID=614",
+					"protocol": "http",
+					"host": [
+						"chotot",
+						"winds",
+						"vn"
+					],
+					"path": [
+						"api",
+						"GetListPropertyByCategoryID"
+					],
+					"query": [
+						{
+							"key": "cateID",
+							"value": "614"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNotify",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}GetNotify",
+					"host": [
+						"{{url}}GetNotify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\":\"+84988292345\",\n\t\"name\":\"abc123\",\n\t\"gender\":\"1\",\n\t\"email\":\"abc123@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}UpdateUser?",
+					"host": [
+						"{{url}}UpdateUser"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePassWord",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"newpass\":\"123456\",\n\t\"oldpass\":\"654321\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}ChangePassWord?",
+					"host": [
+						"{{url}}ChangePassWord"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryID\":614,\n\t\"postTypeID\":7,\n\t\"price\":\"200000\",\n\t\"title\":\"Xe máy Lead mới\",\n\t\"address\":\"\",\n\t\"negotiable\":1,\n\t\"description\":\"Giá trên chưa bao gồm lệ phí trước bạ và phí biển số!Bán xe Vario mới 100% bao quay đầu lỗ từ 5%!Có dịch vụ canh bấm đầu số đẹp cho quý khách!-Cửa hàng cam đoan quay đầu lỗ từ 5-10% cho khách hàng khi mua của cửa hàng chúng em!Tặng mũ bao hiểm INDO cho 30 ngừơi may mắn khi chia sẽ và like tin này!Xin cảm ơn!-Cửa hàng xe máy Bảo\",\n\t\"cityID\":0,\n\t\"listProperty\":\n\t[\n\t\t{\n\t\t\"fieldID\":\"1\",\n\t\t\"optionID\":\"1\",\n\t\t\"value\":0\n\t\t},\n\t\t{\n\t\t\"fieldID\":\"13\",\n\t\t\"optionID\":\"\",\n\t\t\"value\":19\n\t\t},\n\t\t{\n\t\t\"fieldID\":\"21\",\n\t\t\"optionID\":\"619\",\n\t\t\"value\":0\n\t\t},\n\t\t{\n\t\t\"fieldID\":\"28\",\n\t\t\"optionID\":\"31\",\n\t\t\"value\":0\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{urlTest}}CreatePost?",
+					"host": [
+						"{{urlTest}}CreatePost"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "$2y$10$icR0g3/RBwvTQFD8kh2kO.0WOsFc7WBwxAf3o3KrHrnkh0D/ru8wS"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 180,\n  \"title\": \"Dfasdfasdf\",\n  \"price\": \"234234234\",\n  \"categoryID\": \"614\",\n  \"description\": \"Adfasdfasdf\",\n  \"phone\": \"\",\n  \"email\": \"\",\n  \"post_type_id\": \"8\",\n  \"negotiable\": \"0\",\n  \"created_at\": {\n    \"date\": \"2019-06-16 10:52:52.000000\",\n    \"timezone_type\": 3,\n    \"timezone\": \"UTC\"\n  },\n  \"address\": \"Adcasdcascd\",\n  \"longitude\": null,\n  \"latitude\": null,\n  \"userID\": \"92\",\n  \"userName\": \"Nguyễn Trường Thăng\",\n  \"city\": \"Hà Nội\",\n  \"city_id\": \"0\",\n  \"listProperty\": []\n}"
+				},
+				"url": {
+					"raw": "http://chotot.winds.vn/api/UpdatePost",
+					"protocol": "http",
+					"host": [
+						"chotot",
+						"winds",
+						"vn"
+					],
+					"path": [
+						"api",
+						"UpdatePost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePost",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{urlTest}}DeletePost?postID=98&XDEBUG_SESSION_START=PHPSTORM",
+					"host": [
+						"{{urlTest}}DeletePost"
+					],
+					"query": [
+						{
+							"key": "postID",
+							"value": "98"
+						},
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListCity",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}GetListCity",
+					"host": [
+						"{{url}}GetListCity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"anhlee290995@gmail.com\",\n\t\"passWord\":\"123456\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}Login",
+					"host": [
+						"{{url}}Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"anhlee2909@gmail.com\",\n\t\"passWord\":\"123456\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}Register",
+					"host": [
+						"{{url}}Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Uploadfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "1",
+							"type": "file",
+							"src": "/Users/kakashi/Downloads/20190509_153709.jpg"
+						},
+						{
+							"key": "2",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "3",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}Uploadfile?postID=242",
+					"host": [
+						"{{url}}Uploadfile"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						},
+						{
+							"key": "postID",
+							"value": "242"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteListPicture",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"listpictureID\":[152]\n}"
+				},
+				"url": {
+					"raw": "{{urlTest}}DeleteListPicture?",
+					"host": [
+						"{{urlTest}}DeleteListPicture"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginFaceBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"accessToken\":\"EAAFZCGvZBqlPMBAGHuQ5L8svotE60vSNI10nhT5C2WyCDQWezTVX83UnxJLtkYjo2O73PNKF8brFLNU1DPTQA6p8vup5z5KVfZAyrlB2dJ5RrSUZASUC9TmiWCPNZCjnT6ZBCO5BjH6vA9L5dDSAzW0QvDNSNg1oeMwOFKPQ82Rah0peaQX47mr5FmajncLZBAZD\"\n}"
+				},
+				"url": {
+					"raw": "{{urlTest}}LoginFaceBook",
+					"host": [
+						"{{urlTest}}LoginFaceBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTransactionHistory(Pending)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token",
+						"type": "text",
+						"value": "HQdhgcOWw4x8tIkH9ZowkEBh6kyu7U7756SgCGCqLMzJ54qk8gYXiV4h1ZxdM"
+					}
+				],
+				"url": {
+					"raw": "{{url}}GetTransactionHistory",
+					"host": [
+						"{{url}}GetTransactionHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

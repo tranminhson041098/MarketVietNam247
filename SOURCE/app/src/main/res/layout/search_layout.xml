@@ -1,0 +1,24 @@
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#F44336"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="15dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="12dp"
+    android:drawableLeft="@mipmap/ic_search"
+    android:hint="Tìm kiếm"
+    android:textStyle="bold"
+    android:textColorHint="#757070"
+    android:background="@drawable/search_custom"
+
+    />
+
+</LinearLayout>
