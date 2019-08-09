@@ -10,22 +10,24 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.linearlayout.chototapp.Model.Category;
 import com.linearlayout.chototapp.Model.Data;
 import com.linearlayout.chototapp.Model.ListChildCate;
 import com.linearlayout.chototapp.R;
 import com.squareup.picasso.Picasso;
 
+import java.util.List;
+
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
-
+    public List<Data> datahome;
     public Context context;
-    public Data data;
 
-    public void setContext(Context context) {
-        this.context = context;
+    public void setDatahome( List<Data> datahome ) {
+        this.datahome = datahome;
     }
 
-    public void setData(Data data) {
-        this.data = data;
+    public void setContext( Context context ) {
+        this.context = context;
     }
 
     @NonNull
@@ -37,26 +39,23 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull HomeViewHolder viewHolder, int position) {
-
-        final ListChildCate listChildCate = data.getListChildCate().get(position);
-        Picasso.get().load(listChildCate.getUrlImage()).into(viewHolder.imgHome);
-        viewHolder.tvHomeTitle.setText(listChildCate.getCateName());
-
-
-
-
-
+        /*News news = data.get(i);
+        newsViewHolder.tvTitle.setText(news.getTitle());
+        Picasso.get().load(news.getUrlImage()).into(newsViewHolder.imgBg);*/
+        Data data=datahome.get( position );
+        viewHolder.tvHomeTitle.setText( data.getCateName() );
+        Picasso.get().load( data.getUrlImage() ).into( viewHolder.imgHome );
     }
 
     @Override
     public int getItemCount() {
-        return data.getListChildCate().size();
+        return datahome.size();
     }
 
     public class HomeViewHolder extends RecyclerView.ViewHolder
     {
         ImageView imgHome;
-        TextView tvHomeTitle,tvSell;
+        TextView tvHomeTitle;
 
         public HomeViewHolder(@NonNull View itemView) {
             super(itemView);

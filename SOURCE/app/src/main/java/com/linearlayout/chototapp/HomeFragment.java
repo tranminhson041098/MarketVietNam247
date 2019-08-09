@@ -32,8 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment {
-
-
+    Category category;
     View vRoot;
     RecyclerView rvHomeFragment;
 
@@ -71,11 +70,11 @@ public class HomeFragment extends Fragment {
                 try {
                     strJson = response.body().string();
                     Gson gson = new Gson();
-                    Data data = gson.fromJson(strJson, Data.class);
+                    category = gson.fromJson(strJson, Category.class);
                     rvHomeFragment.setLayoutManager(new GridLayoutManager(getContext(), 2));
                     HomeAdapter adapter = new HomeAdapter();
                     adapter.setContext(getContext());
-                    adapter.setData(data);
+                    adapter.setDatahome(category.data);
                     rvHomeFragment.setAdapter(adapter);
                     Toast.makeText(getContext(), "Everything is done", Toast.LENGTH_SHORT).show();
 

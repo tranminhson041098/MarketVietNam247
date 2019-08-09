@@ -1,72 +1,73 @@
-<LinearLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
 
     <include
-        layout="@layout/search_layout"
-        ></include>
+        android:id="@+id/layout"
+        layout="@layout/search_layout"></include>
 
     <ScrollView
+        android:layout_below="@id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_discovery"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="7dp"
                 android:layout_marginLeft="17dp"
-                android:textStyle="bold"
                 android:text="Khám phá danh mục"
                 android:textColor="#000"
-                android:textSize="18dp" />
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <RelativeLayout
-
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tv_discovery"
+                android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_news"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-                <TextView
-                    android:id="@+id/tv_sell"
-                    android:layout_marginHorizontal="75dp"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignBottom="@id/rv_news"
-                    android:hint="Bán đồ của bạn "
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:background="@drawable/imageview_yellow_ground"
-                    android:drawableLeft="@mipmap/ic_camera" />
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="0dp">
 
-</RelativeLayout>
 
-        </LinearLayout>
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
 
     </ScrollView>
 
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tv_sell"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/imageview_yellow_ground"
+        android:drawableLeft="@mipmap/ic_camera"
+        android:gravity="center"
+        android:hint="Bán đồ của bạn "
+        android:textStyle="bold" />
 
 
-
-
-
-
-
-            </LinearLayout>
+</RelativeLayout>
 
 
 

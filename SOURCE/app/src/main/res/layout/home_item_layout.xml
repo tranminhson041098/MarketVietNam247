@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="5dp">
 
     <ImageView
         android:id="@+id/img_category"
@@ -16,12 +17,12 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/img_category"
         android:layout_alignBottom="@+id/img_category"
-        android:layout_marginTop="23dp"
-        android:layout_marginBottom="95dp"
-        android:paddingLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="50dp"
+        android:paddingLeft="15dp"
         android:paddingRight="30dp"
         android:text="Bất động sản"
-        android:textColor="#F44336"
-        android:textSize="24sp"
+        android:textColor="#F5F3F2"
+        android:textSize="18sp"
         android:textStyle="bold" />
 </RelativeLayout>
