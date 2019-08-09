@@ -1,12 +1,14 @@
 package com.linearlayout.chototapp;
 
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,7 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.linearlayout.chototapp.APIChotot.ChototService;
 import com.linearlayout.chototapp.Adapter.HomeAdapter;
+import com.linearlayout.chototapp.Controller.HomeActivity;
 import com.linearlayout.chototapp.Model.Category;
 import com.linearlayout.chototapp.Model.Data;
 
@@ -57,40 +60,53 @@ public class HomeFragment extends Fragment {
     }
 
     void getdata() {
-        Retrofit retrofit = new Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://choviet247.vn/api/")
-                .build();
-        retrofit.create(ChototService.class).getListCategory().enqueue(new Callback<ResponseBody>() {
+        final ProgressDialog progressDoalog;
+        progressDoalog = new ProgressDialog( getContext() );
+        progressDoalog.setMessage( "LOADING............." );
+        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDoalog.show();
+
+        Handler handler = new Handler(  );
+        handler.postDelayed( new Runnable() {
             @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+            public void run() {
+                Retrofit retrofit = new Retrofit.Builder()
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .baseUrl("http://choviet247.vn/api/")
+                        .build();
+                retrofit.create(ChototService.class).getListCategory().enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
 
 
-                String strJson = null;
-                try {
-                    strJson = response.body().string();
-                    Gson gson = new Gson();
-                    category = gson.fromJson(strJson, Category.class);
-                    rvHomeFragment.setLayoutManager(new GridLayoutManager(getContext(), 2));
-                    HomeAdapter adapter = new HomeAdapter();
-                    adapter.setContext(getContext());
-                    adapter.setDatahome(category.data);
-                    rvHomeFragment.setAdapter(adapter);
-                    Toast.makeText(getContext(), "Everything is done", Toast.LENGTH_SHORT).show();
+                        String strJson = null;
+                        try {
+                            strJson = response.body().string();
+                            Gson gson = new Gson();
+                            category = gson.fromJson(strJson, Category.class);
+                            rvHomeFragment.setLayoutManager(new GridLayoutManager(getContext(), 2));
+                            HomeAdapter adapter = new HomeAdapter();
+                            adapter.setContext(getContext());
+                            adapter.setDatahome(category.data);
+                            rvHomeFragment.setAdapter(adapter);
+                            Toast.makeText(getContext(), "Đã lấy được dữ liệu", Toast.LENGTH_SHORT).show();
+                            progressDoalog.dismiss();
 
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                    }
 
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
+                        Toast.makeText(getContext(), "Không thể kết nối dữ liệu", Toast.LENGTH_SHORT).show();
+                        progressDoalog.dismiss();
+                    }
+                });
             }
+        } ,1000);
 
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Toast.makeText(getContext(), "Không thể kết nối dữ liệu", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
     }
 

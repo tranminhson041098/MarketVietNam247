@@ -6,6 +6,9 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.linearlayout.chototapp.AccountFragment;
@@ -15,9 +18,7 @@ import com.linearlayout.chototapp.PostFragment;
 import com.linearlayout.chototapp.R;
 
 public class HomeActivity extends AppCompatActivity {
-
     BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,10 +30,10 @@ public class HomeActivity extends AppCompatActivity {
     void init()
 
     {
-
         HomeFragment homeFragment = new HomeFragment();
         final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.container,homeFragment);
+
         fragmentTransaction.commit();
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
