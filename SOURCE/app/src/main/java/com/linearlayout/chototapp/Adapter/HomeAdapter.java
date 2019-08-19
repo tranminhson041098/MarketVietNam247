@@ -13,19 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.linearlayout.chototapp.Controller.DetailActivity;
 import com.linearlayout.chototapp.Model.Category;
-import com.linearlayout.chototapp.Model.Data;
-import com.linearlayout.chototapp.Model.ListChildCate;
 import com.linearlayout.chototapp.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
-    public List<Data> datahome;
+    public List<Category> datahome;
     public Context context;
 
 
-    public void setDatahome(List<Data> datahome) {
+    public void setDatahome(List<Category> datahome) {
         this.datahome = datahome;
     }
 
@@ -42,20 +40,18 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull HomeViewHolder viewHolder, final int position) {
-        /*News news = data.get(i);
-        newsViewHolder.tvTitle.setText(news.getTitle());
-        Picasso.get().load(news.getUrlImage()).into(newsViewHolder.imgBg);*/
-        final Data data = datahome.get(position);
-        viewHolder.tvHomeTitle.setText(data.getCateName());
-        Picasso.get().load(data.getUrlImage()).into(viewHolder.imgHome);
+        final Category category = datahome.get(position);
+        viewHolder.tvHomeTitle.setText(category.getCateName());
+        Picasso.get().load(category.getUrlImage()).into(viewHolder.imgHome);
 
         //phần chuyển màn hình
 
         viewHolder.imgHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("Object",datahome.get(position));
+                intent.putExtra("Category",datahome.get(position));
                 context.startActivity(intent);
             }
         });

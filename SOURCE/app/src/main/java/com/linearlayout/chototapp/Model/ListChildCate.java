@@ -3,7 +3,9 @@ package com.linearlayout.chototapp.Model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class ListChildCate {
+import java.io.Serializable;
+
+public class ListChildCate implements Serializable {
 
 @SerializedName("CateID")
 @Expose
