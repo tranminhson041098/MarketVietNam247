@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F44336"
+            android:weightSum="10"
+
+            >
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/ic_back"
+                android:backgroundTint="#fff" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="8"
+                android:gravity="center_vertical"
+                android:hint="Title"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@mipmap/ic_search"
+
+                android:backgroundTint="#fff" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rv_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/rv_abc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:layout_marginTop="2dp"
+
+            android:id="@+id/rv_detail_suggest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="75dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/imageview_yellow_ground"
+        android:drawableLeft="@mipmap/ic_camera"
+        android:gravity="center"
+        android:hint="Bán đồ của bạn "
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

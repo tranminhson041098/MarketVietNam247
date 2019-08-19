@@ -86,7 +86,7 @@ public class HomeFragment extends Fragment {
                     rvHomeFragment.setLayoutManager( new GridLayoutManager( getContext(), 2 ) );
                     HomeAdapter adapter = new HomeAdapter();
                     adapter.setContext( getContext() );
-                    adapter.setDatahome( category.data );
+                    adapter.setDatahome( category.data);
                     rvHomeFragment.setAdapter( adapter );
                     Toast.makeText( getContext(), "Đã lấy được dữ liệu", Toast.LENGTH_SHORT ).show();
 //                    progressDoalog.dismiss();
